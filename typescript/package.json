@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "startHere.js",
+  "dependencies": {
+    "cowsay": "^1.4.0",
+    "dayjs": "^1.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc"
+  },
+  "author": "",
+  "license": "ISC"
+}
