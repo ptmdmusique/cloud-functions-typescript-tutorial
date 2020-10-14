@@ -6,6 +6,8 @@ Firebase is mostly useful for Web and Mobile development. It includes a set of s
 ### **Firebase and GCP**
 To me, Firebase is like a sub service of Google Cloud Platform (GCP). What's different you ask? Here you go: [doc](https://medium.com/google-developers/whats-the-relationship-between-firebase-and-google-cloud-57e268a7ff6f)
 For more information, check out their [tutorial](https://firebase.google.com/). One thing I like about Firebase is how easy it is to get started with a simple project (and their free tier is sweet too!), and you can always connect it to other GCP services too!
+### **Note**
+If you're reading this, I assume you already have basic TypeScript and NodeJS knowledge. Checkout my TypeScript tutorial if you need more information on those two
 
 
 ## Cloud Functions
