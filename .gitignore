@@ -67,4 +67,5 @@ node_modules/
 
 *-debug.log
 
-/typescript/*.js*
+/typescript/*.js
+/typescript/*.js.*
