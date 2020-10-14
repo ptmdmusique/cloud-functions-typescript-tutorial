@@ -18,18 +18,39 @@ console.log(myArr);
 myArr2 = []; // For low-level nerd: this asks myArr2 to point to another memory address for a new array
 console.log("Empty array", myArr2);
 
-// ! Note, the example below only does a shallow copy,
-//  it will ask the 2nd array to point to the same place as the original one
+// --- Shallow copy
+console.log("Shallow copy---");
+//  The 2nd array will point to the same place as the original one
 const shallowCopy = myArr;
+// More on deep copy later
+
+// --- Array comparison
+console.log("Shallow comparison---");
+console.log(myArr === shallowCopy, "<--- Should return true");
+// true because both of them have the same reference
+
+// --- Iterating through array
+console.log("Array iteration---");
+for (let i = 0; i < myArr.length; i++) {
+  console.log(myArr[i]);
+}
+// or
+for (let ele of myArr) {
+  // Remember, this is OF, not IN
+  console.log(ele);
+}
 
 // --- Array operator
 // ~ Spread operator, it destruct the entire array for the inner elements
-console.log("Spread operator");
+console.log("Spread operator---");
 console.log(...myArr); // This is equivalent to console.log(myArr[0], myArr[1], myArr[2]);
 const myArr3 = [...myArr]; // This is also a way to copy the whole array
 console.log(myArr3, "<--- Should have the same value as myArr");
+console.log(myArr3 === myArr, "<--- Should return false");
+// false because they have different reference even though elements are the same
 
 // --- Array functions
+console.log("Array built-in functions---");
 // ~ push: add another element to the END of array
 // ! this is destructive, meaning it modify the original array
 myArr3.push("push example", "push example 2");
@@ -103,7 +124,8 @@ const someSum = myArr5
   .map((ele) => ele * 2) // Then multiply each value by 2
   .reduce((prev, cur) => prev + cur); // And sum them up
 console.log(someSum);
-// NOTE: There are a lot more, but I think those above are the most common and hardest one to understand
+
+// NOTE: There are a lot more, but I think those above are the hardest one to understand
 
 console.log("\n");
 /*
@@ -147,7 +169,7 @@ copyMap = { ...someMap }; // Deep copy
 
 // --- More advanced stuff
 // Object destructuring - This break down the object and extract only what is needed
-console.log("Object destructuring");
+console.log("Object destructuring---");
 {
   const { keyA, keyC } = someMap;
   console.log(keyA, keyC);
@@ -162,6 +184,45 @@ console.log("Object destructuring");
   const { keyA, ...otherKeys } = someMap;
   console.log(keyA, otherKeys);
 }
+
+// Creating new objects
+console.log("Creating new object from variables---");
+{
+  const numA = 10;
+  const numB = 20;
+  const stringA = 10;
+  // I can create a new object like this
+  const newObj = {
+    numA: numA,
+    numB: numB,
+    stringA: stringA,
+  };
+  console.log(newObj);
+
+  // See how the key and value has the same variable name?
+  //  I can omit it, meaning I can do this
+  const newObjToo = {
+    numA,
+    numB,
+    stringA,
+  };
+  console.log(newObjToo);
+}
+
+// Turning object keys, values into array
+console.log("Map into array");
+console.log(Object.keys(someMap)); // Retrieving keys of a map
+// Note, the 2 below only work if you use ES2017 or above for "target" in tsconfig.json
+console.log(Object.values(someMap)); // Retrieving values of a map
+console.log(Object.entries(someMap)); // Retrieving both keys and values in form of tuple
+
+// Short hand to iterate through keys in object
+for (let key in someMap) {
+  // Remember, this is IN, not OF
+  console.log(key, ":", someMap[key]);
+}
+// which is the same as
+Object.keys(someMap).forEach((key) => console.log(key, ":", someMap[key]));
 
 console.log("\n");
 /*
@@ -248,3 +309,5 @@ const testIntersection: MyIntersection = {
 console.log(testUnion, testIntersection);
 
 // TODO: Add more later
+
+// * Good job so far! Let's go to packageImportExport.ts for the next step

@@ -23,3 +23,11 @@ The `-D` flag is to install into dev dependencies, I usually do this so that the
 
 ### **Ready?**
 Let's head to `/typescript/startHere.ts` for the first step!
+
+### **Roadmap**
+You can follow this order, from basic to advance
+1. `startHere.ts`: basic stuff for TS! Content: Variable declaration, Function and Math operations
+2. `basicStuffToo.ts`: more basic stuff! Content: Scope, Condition, and Loop
+3. `advancedType.ts`: deep dive into TS and JS! Content: Array, Object/Map, Interface, Union and Intersection with a lot of related operations
+4. `packageImportExport.ts`: learn how to use external library through import, and learn how to export your variable! Content: Using Libs, Importing libs and exporting
+5. `packageImportExportToo.ts`: learn how to import and use your own exported variables!

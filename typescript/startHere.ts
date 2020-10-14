@@ -166,7 +166,7 @@ someFunc((myString: string) => myString, "Duc"); // This is the power of anonymo
 */
 
 // * Congratulation, you've leveled up!
-// *  let's move on to advancedType.ts for the next tutorial
+// *  let's move on to basicStuffToo.ts for the next tutorial
 
 // * Some notes before we move on to the next tutorial
 /*
