@@ -12,7 +12,7 @@ There are some other crash courses worth checking out too [link](https://www.you
 1. My favorite IDE is Visual Studio Code. It integrates with `tsc` through their integrated task runner so you won't have to config much.
 2. I add some configuration in `tsconfig.json` so you always compile in watch mode, meaning once you run `tsc` command inside `/typescript/` folder, you only have to type, save and the result file will be automatically re-compiled. You can always turn this off by switching the `watch` flag in `tsconfig.json` to `false`
 3. To start compiling, you can run `tsc` or `npm start` once inside `/typescript/` folder
-4. After compilation, run `node <your file name>.js` to run the compiled file. NOTE: make sure you run against a `.js` file, which is a compiled version of `.ts`
+4. After compilation, run `node <your file name>.js` to run the compiled file. NOTE: make sure you run against a `.js` file, which is the compiled version of `.ts`
 
 ### **Adding packages**
 1. TypeScript uses `npm` to manage its packages, just like Javascript.
