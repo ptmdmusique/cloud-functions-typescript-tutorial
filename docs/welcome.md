@@ -13,7 +13,8 @@ I hope you guys enjoy :D Lemme know if you have any question
 For npm projects in general, you will need to install
 1. NodeJS: https://nodejs.org/en/download/
 2. npm: https://www.npmjs.com/get-npm (should be already installed with NodeJS)
-3. Firebase CLI: https://firebase.google.com/docs/cli
+3. TypeScript package: https://code.visualstudio.com/docs/typescript/typescript-compiling
+4. Firebase CLI: https://firebase.google.com/docs/cli
 
 
 ### Repo structure:

@@ -20,6 +20,7 @@ Although you can do this in any folder, I suggest go to `/functions/` before han
 3. To shut down the emulator, simply terminate the process in your terminal (`ctrl + C` for Git Bash)
 4. To deploy, run `npm deploy`
 <br>
-The entries file will be `src/index.ts`. Let's go there for more tutorial :D
-<br>
 For the list of commands, check out the `scripts` section under file `package.json`
+
+### **Ready?**
+The entries file will be `/functions/src/index.ts`. Let's go there for more tutorial :D
