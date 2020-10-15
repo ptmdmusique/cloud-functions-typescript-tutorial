@@ -24,5 +24,12 @@ Although you can do this in any folder, I suggest go to `/functions/` before han
 <br>
 For the list of commands, check out the `scripts` section under file `package.json`
 
+### Ports
+Once you start the emulator, the ports are:
+1. 4000: Emulator UI. Go to http://localhost:4000/ to see the UI
+2. 8000: Firestore resource port
+3. 5001: Functions resource port
+> To invoke a function, go to `http://localhost:5001/fir-typescript-tutorial/us-central1/<endpoint's name>`
+
 ### **Ready?**
 The entries file will be `/functions/src/index.ts`. Let's go there for more tutorial :D
