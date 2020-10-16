@@ -8,7 +8,7 @@ const message: string = "HELLO WORLD! :D"; // I usually use `const` as much as p
 // Once I declare a variable, I need to stick with that datatype for the rest of its life, I mean scope
 // message = 3; // so this won't work. Try to uncomment it to see how scary it is when the compiler is mad at you
 
-// --- I can always omit the type if I also initialize it, but it doesn't work well with array and object
+// --- I can always omit the type if I initialize it, but it doesn't work well with array and object
 const message2 = "This should be string by default";
 
 // --- You can also declare multiple variables like this
@@ -38,13 +38,14 @@ const normString = "first " + a + " second " + b + " third";
 const templateString = `first ${a} second ${b} third`;
 // This is quite similar to {} and format in Python
 
+console.log("\n");
 /*
 
 */
 
 // ? Logging --- These are already in JS
 // --- To log something out, simply do
-https: console.info("---LOGGING");
+console.info("---LOGGING");
 console.log("How simple is this?");
 console.log(message, "more!", "more more more!"); // The "," will separate the log output by space each
 // --- There are multiple level of logs
@@ -53,6 +54,20 @@ console.info("Here is just an info");
 console.debug("Debug log!");
 // and so on
 
+console.log("\n");
+/*
+
+*/
+
+// ? Type Conversion (JS)
+console.info("---TYPE CASTING");
+// Just like any other programming languages, JS support type casting
+// For all type casting available: https://www.w3schools.com/js/js_type_conversion.asp
+console.log(`typeof "5" is ${typeof "5"}`);
+console.log(`typeof 5 is ${typeof 5}`);
+console.log(`typeof parseInt("5") is ${typeof parseInt("5")}`);
+
+console.log("\n");
 /*
 
 */
@@ -98,7 +113,12 @@ console.log(
   null !== undefined
 );
 
-// ? Functions --- These are already in JS, except the type definition
+console.log("\n");
+/*
+
+*/
+
+// ? Functions --- These are already in JS minus the type definition
 console.log("---FUNCTIONS");
 // --- There are 2 way to declare a function
 function myNormFunc(arg1: number, arg2: string): string {
