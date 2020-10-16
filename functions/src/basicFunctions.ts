@@ -11,8 +11,12 @@ export const emojiSender = https.onRequest((request, response) => {
   const emojiArray = allEmojiString.split(" ");
   const randomEmoji = emojiArray[getRandomIndex(emojiArray.length)];
 
-  // No return at all, response.send will ends the HTTP call
+  // No return at all, response.send will send back the response
   response.status(200).send(`Here is your emoji: ${randomEmoji}`);
+
+  // The function will run after this, but it will crash if you call response.* again
+  // Try to uncomment the line below and see for yourself :)
+  // response.send("You should see a crash");
 });
 
 // ? Throwing an error but not catching like this is generally not a good idea

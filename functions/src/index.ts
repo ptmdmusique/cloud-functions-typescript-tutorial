@@ -1,5 +1,7 @@
 // * In this tutorial, I'll walk you through the basic concept of Firebase Cloud Functions
 // ! Make sure you run the emulator to interact with the endpoints
+// `npm start` in 1 terminal to start the emulator and
+// `npm run serve` in another window to watch for change
 
 // ! If you're not familiar with these import or variable declaration syntax,
 // !  I suggest taking a look at my TypeScript tutorial first
