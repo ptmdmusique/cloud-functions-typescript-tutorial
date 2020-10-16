@@ -120,5 +120,22 @@ const fetchRandomText = async () => {
 };
 // fetchRandomText(); // uncomment to see effect
 
-// https://stackoverflow.com/a/42507649/13118446
+// ? Async can be trickily tricky
+const trickyEventLoop = () => {
+  // * Can you guess the result of the log?
+  console.log("1");
+
+  setTimeout(function () {
+    console.log("2");
+  }, 0); // Wait for 0 second ?? :D ??
+
+  console.log("3");
+
+  setTimeout(function () {
+    console.log("4");
+  }, 1000); // Wait for 1 second
+};
+trickyEventLoop(); // Try to run this, did the log meet your expectation? :)
+// Something to read: https://stackoverflow.com/a/42507649/13118446
+
 // * Good work! Let's head to packageImportExport.ts for the next level :D
