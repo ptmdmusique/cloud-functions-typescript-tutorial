@@ -308,6 +308,55 @@ const testIntersection: MyIntersection = {
 };
 console.log(testUnion, testIntersection);
 
-// TODO: Add more later
+// ? any - unknown and Type Assertion (TS)
+// ! Don't mistake this for JS Type casting!
+// !  type casting = convert type in runtime
+// !  type assertion = static type check for compiler
+//  https://techformist.com/type-casting-typescript/
+console.info("--- Any and Unknown");
+// unknown is used to indicate that the type will and has to be defined later to be used
+let unknownString: unknown = "Some unknown type";
+
+// any is used to indicate that the variable can have any type
+let anyString: any = "Some any string";
+
+// So, what's the different from any?
+// Unknown is much safer, why?
+console.info("--- Type assertion");
+console.info("any length: ", anyString.length);
+// The compiler allows that, but what if I do
+anyString = 5;
+console.info("any length too: ", anyString.length);
+// Still allowed, but return undefined because number doesn't have prop length
+// Very dangerous if you use that later
+
+// * But unknown will make the compiler stop you,
+//  because it wants to make sure you known what you're doing
+// console.log("unknown length: ", unknownString.length); // compiler will be mad at you
+
+// * That's when type assertion comes into play!
+const assertedString = unknownString as string;
+// Hooray!
+console.info("unknown length too: ", assertedString.length);
+// Or in short
+console.info("unknown length capu2: ", (unknownString as string).length);
+
+// ! But remember, TypeScript is a static type check, so you can still do ...
+unknownString = 5;
+const whyYouNoBroken = unknownString as string;
+// * Does that mean the compiler is broken?
+// No, TypeScript does type check during compile time, NOT run time
+// So, it won't know unknownString has been assigned to 5 when it compile
+// (unless it's a constant, which you can't re-assign the variable)
+
+// * Most of the type I see people use type assertion with any or unknown
+// There are some advanced use cases, but you'll understand it better when you see them
+
+/*
+
+*/
+// * There are also Classes, Generic, Omit, etc,
+// * I'll let you check it out by yourselves... for now
+// https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 // * Good job so far! Let's go to advancedStuff.ts for the next step
