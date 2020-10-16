@@ -310,4 +310,4 @@ console.log(testUnion, testIntersection);
 
 // TODO: Add more later
 
-// * Good job so far! Let's go to packageImportExport.ts for the next step
+// * Good job so far! Let's go to advancedStuff.ts for the next step
