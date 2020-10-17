@@ -46,7 +46,8 @@ Once you start the emulator, the ports are:
 2. 8000: Firestore resource port
 3. 5001: Functions resource port
 
-> To invoke a function, go to `http://localhost:5001/fir-typescript-tutorial/us-central1/<endpoint's name>`
+> To invoke a function, go to `http://localhost:5001/<your project id>/<your GCP resource location>/<endpoint's name>`
+>> `<your project id>` and `<your GCP resource location>` can both be found in your Firebase's `project settings`
 
 ### **Ready?**
 

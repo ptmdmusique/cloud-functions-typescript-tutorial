@@ -50,5 +50,7 @@ export {
   asyncEndpoint,
 } from "./basicFunctions"; //Re-export endpoints declared in basicFunctions.ts
 
+export { helloFirestore, helloFirestoreToo } from "./basicFirestore";
+
 // * Great! Let's head to basicFunctions.ts for basic examples.
 // *    or you can go to firestoreFunctions.ts for examples on how to interact with Firestore
